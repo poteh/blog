@@ -25,6 +25,10 @@
           <p class="view"><a href="{{ site.github.owner_url }}">View My Lollipop</a></p>
         {% endif %}
 
+        {% for post in site.posts %}
+	        <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	      {% endfor %}        
+
         {% if site.show_downloads %}
           <ul>
             <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
